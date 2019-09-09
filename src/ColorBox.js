@@ -32,7 +32,7 @@ changeCopyState(){
                </div>
                 <div className="copy-contaner">
                     <div className="box-content">
-                        <span>{name}</span>
+                        <span id="color-name">{name}</span>
                     </div>
                     <button className="copy-button">Copy</button>
                 </div>
