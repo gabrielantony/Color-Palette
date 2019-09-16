@@ -17,7 +17,7 @@ changeCopyState(){
 }
 
     render() {
-        const {name, background} = this.props;
+        const {name, background, moreUrl} = this.props;
         const { copied } = this.state;
 
         return (
@@ -37,8 +37,9 @@ changeCopyState(){
                     </div>
                     <button className="copy-button">Copy</button>
                 </div>
-                <Link to="/" onClock={e => e.stopPropagation()}>
-                <span class="see-more">More</span>
+                <Link to={moreUrl} 
+                    onClock={e => e.stopPropagation()}>
+                    <span class="see-more">More</span>
                 </Link>
             </div> 
             </CopyToClipboard>
