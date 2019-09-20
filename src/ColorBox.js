@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import { Link } from "react-router-dom";
-import "./ColorBox.css"
+import "./ColorBox.css";
 
 class ColorBox extends Component {
 constructor(props) {
@@ -39,7 +39,7 @@ changeCopyState(){
                 </div>
                 {showLink && (
                   <Link to={moreUrl} 
-                    onCli ck={e => e.stopPropagation()}>
+                    onClick={e => e.stopPropagation()}>
                     <span className="see-more">More</span>
                 </Link>  
                 )}   
