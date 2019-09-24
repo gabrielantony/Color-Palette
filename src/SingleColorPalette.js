@@ -15,9 +15,25 @@ const styles = {
         position: "relative",
         cursor: "pointer",
         marginBottom: "-3.5px",
-        "&&:hover button": {
-            opacity: "1"
-        }
+    },
+    Palette: {
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column"
+    },
+    colors: {
+        height: "90%"
+    },
+    goBack: {
+        width: "20%",
+        height:"50%",
+        margin: "0 auto",
+        display: "inline-block",
+        position: "relative",
+        cursor: "pointer",
+        marginBottom: "-3.5px",
+        opacity: "1",
+        backgroundColor: "black",
     },
     backButton: {
         width: "100px",
@@ -68,8 +84,8 @@ class SingleColorPalette extends Component {
 
     render() {
         const {format} = this.state;
-        const { classes } = this.props;
         const {paletteName, emoji, id,} = this.props.palette;
+        const { classes } = this.props;
         const colorBoxes = this._shades.map(color => (
             <ColorBox 
             key={color.name} 
@@ -79,13 +95,13 @@ class SingleColorPalette extends Component {
             />
         ))
         return (
-            <div className="SingleColorPalette Palette">
+            <div className={classes.Palette}>
                 <Navbar
                  handleChange={this.changeFormat}
                  showingAllColors = {false}/>
-                <div className="Palette-colors">
+                <div className={classes.colors}>
                 {colorBoxes}
-                <div className="go-back ColorBox">
+                <div className={classes.goBack}>
                     <Link to={`/palette/${id}`} className={classes.backButton}>GO BACK</Link>
                     </div>
                 </div>

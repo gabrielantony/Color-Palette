@@ -2,11 +2,11 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .Palette-colors {
     height: 90%;
-}
+} 
 
 .palette-footer {
     background-color: white;
