@@ -8,10 +8,10 @@ export default {
         display: "inline-block",
         position: "relative",
         cursor: "pointer",
-        marginBottom: "-3.5px",
-        "&&:hover button": {
-            opacity: "1"
-        }
+        marginBottom: "-4px",
+        "&:hover button": {
+          opacity: "1"
+        },
     },
     copyText: {
         color: props => 
@@ -60,16 +60,18 @@ export default {
         position: "absolute",
         width: "100%",
         left: "0px",
-        bottom: "0px",
-        paddingBottom: "10px",
+        bottom: "10px",
         color: "black",
         letterSpacing: "1px",
         textTransform: "uppercase",
         fontSize: "12px"
     },
+    colorName: {
+        padding: "10px",
+    },
     copyOverlay:  {
-        opacity: 0,
-        zIndex: 0,
+        opacity: "0",
+        zIndex: "0",
         width: "100%",
         height: "100%",
         transition: "transform 0.6s ease-in-out",
