@@ -12,12 +12,17 @@ export default {
         alignItems: "flex-start",
         flexDirection: "column",
         flexWrap: "wrap",
-        color: "white"
     },
     nav: {
         display: "flex",
         width: "100%",
-        justiyContent: "space-between"
+        justiyContent: "space-between",
+        alignItems: "center",
+        color: "white",
+        "& a": {
+            color: "white",
+            textDecoration: "none"
+        }
     },
     palettes: {
         boxSizing: "border-box",
